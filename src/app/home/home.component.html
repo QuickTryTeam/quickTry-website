@@ -1,0 +1,101 @@
+<div>
+    <nav class="navbar navbar-expand-md navbar-light custom-navbar sticky-top" id="home">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="assets/img/logo-withoutbg.png"></a>
+      <div class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#workshops">Workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+
+    <div class="container-img">
+        <img src="assets/img/background-middlev2.png" alt="Image">
+    </div>
+
+    <div class="container-1" id="workshops">
+      <div class="text-container-center font-inter-b1 font-inter-s36">All workshops</div>
+    </div>
+
+    <div class="card-container">
+      <div>
+        <div class="row g-0 custom-card custom-card-navigate mb-4" *ngFor="let workshop of workshopList" (click)="redirectToForm()">
+          <div class="col-md-6">
+            <img [src]="workshop.img_url" class="img-fluid" [alt]="workshop.workshop_id" (error)="workshop.img_url = commonImageUrl">
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <div class="d-flex justify-content-between card-header-s1 font-inter-s20">
+                <div class="card-text font-inter-orange">{{ workshop.workshop_type }}</div>
+                <div class="card-text font-inter-orange">{{ workshop.workshop_date }}</div>
+              </div>
+              <h3 class="font-inter-b2 font-inter-s36">{{ workshop.workshop_name }}</h3>
+              <div class="d-flex card-header-s2">
+                <div class="font-inter-s20">วิทยากร - คุณ{{ workshop.lecturer_name }}</div>
+              </div>
+              <div class="d-flex justify-content-between card-header-s1 font-inter-s20">
+                <div><span class="fa-regular fa-user padding-r10"></span>{{ workshop.sum_customers }} / {{ workshop.max_customers }}</div>
+                <div><span class="fa-regular fa-clock padding-r10"></span>{{ workshop.duration }}</div>
+                <div>{{ workshop.level }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-container">
+      <hr class="divider">
+    </div>
+
+    <div class="container-1" id="about">
+      <div class="text-container-center font-inter-b1 font-inter-s36">About us</div>
+    </div>
+
+    <div class="card-container">
+      <div>
+        <div class="row g-0 custom-card mb-4">
+          <div class="col-md-7">
+            <div class="card-body">
+              <div class="font-inter-s20 card-header-s1">
+                จะเรียนต่อสายไหนดี ? เราทำงานสายนี้จะเหมาะกับเรามั้ย ? เราเข้าใจว่าหลาย ๆ การตัดสินใจคุณยังไม่มั่นใจในสิ่งที่ตัวเองกำลังจะเลือกขนาดนั้น <br><br> ให้เราช่วยเปิดประสบการณ์ ทำให้คุณมั่นใจมากขึ้นด้วยการมาลองสิ่งนั้นแบบไว ๆ กันเถอะ!
+              </div>
+              <div class="font-inter-orange font-inter-s36 card-header-s2">
+                ถ้าอยากลองอะไรไว ๆ ให้นึกถึงเรา
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 d-flex justify-content-center align-items-center">
+            <img src="assets/img/logo-withoutbg.png" class="img-aboutus">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer bg-body-tertiary">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-md-6">
+                  <div class="text-start p-3">
+                      © 2024 QuickTry
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <ul class="nav justify-content-end list-unstyled d-flex">
+                      <li class="ms-3"><a href="https://www.facebook.com/QuickTry"><span class="fa-brands fa-square-facebook footer-icon"></span></a></li>
+                      <li class="ms-3"><a href="mailto:quicktry.team@gmail.com"><span class="fa-solid fa-envelope footer-icon"></span></a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </footer>  
+</div>
