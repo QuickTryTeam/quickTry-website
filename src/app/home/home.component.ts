@@ -9,7 +9,7 @@ import { WorkshopService } from '../service/workshop.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  commonImageUrl: string = '/assets/img/mock.png'
+  commonImageUrl: string = 'assets/img/mock.png'
   workshopList: WorkshopDetail[] = [];
 
   constructor(
