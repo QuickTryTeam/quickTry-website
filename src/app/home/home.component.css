@@ -83,3 +83,7 @@
     width: 30vw;
     margin: 20px;
 }
+
+.carousel-control-prev, .carousel-control-next {
+    color: red;
+}

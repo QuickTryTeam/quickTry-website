@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { LoadingComponent } from './loading/loading.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MdbCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
