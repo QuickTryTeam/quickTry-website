@@ -29,6 +29,11 @@ html, body {
     font-size: 30px;
 }
 
+.font-inter-s12 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .card-header-s1 {
     padding: 30px 0px;
 }
@@ -73,6 +78,10 @@ html, body {
     .font-inter-s20 {
         font-size: 24px;
     }
+
+    .font-inter-s12 {
+        font-size: 36px;
+    }
 }
 
 @media (min-width: 1300px) and (max-width: 1500px) {
@@ -98,6 +107,10 @@ html, body {
 
     .font-inter-s20 {
         font-size: 20px;
+    }
+
+    .font-inter-s12 {
+        font-size: 30px;
     }
 }
 
@@ -125,6 +138,10 @@ html, body {
     .font-inter-s20 {
         font-size: 16px;
     }
+
+    .font-inter-s12 {
+        font-size: 24px;
+    }
 }
 
 @media (min-width: 910px) and (max-width: 1070px) {
@@ -150,7 +167,11 @@ html, body {
     }
 
     .font-inter-s20 {
-        font-size: 14px;
+        font-size: 10px;
+    }
+
+    .font-inter-s12 {
+        font-size: 20px;
     }
 }
 
@@ -181,6 +202,10 @@ html, body {
 
     .font-inter-s20 {
         font-size: 10px;
+    }
+
+    .font-inter-s12 {
+        font-size: 16px;
     }
 }
 
@@ -216,6 +241,10 @@ html, body {
 
     .font-inter-s20 {
         font-size: 16px;
+    }
+
+    .font-inter-s12 {
+        font-size: 12px;
     }
 }
 
@@ -256,5 +285,8 @@ html, body {
     .font-inter-s20 {
         font-size: 14px;
     }
-}
 
+    .font-inter-s12 {
+        font-size: 8px;
+    }
+}
