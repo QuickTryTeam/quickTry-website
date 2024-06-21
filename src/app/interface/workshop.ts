@@ -9,4 +9,6 @@ export interface WorkshopDetail {
     workshop_date: string;
     level: string;
     img_url: string;
+    total_customers: string;
+    workshop_category: string;
 }

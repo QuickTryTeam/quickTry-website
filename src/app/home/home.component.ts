@@ -21,6 +21,18 @@ export class HomeComponent {
     this.loadingService.show();
     this.workshopService.getWorkshops().subscribe((res) => {
       this.workshopList = res.data;
+
+      this.workshopList.forEach(workshop => {
+        if (workshop.workshop_category === 'record') {
+          workshop.workshop_date = 'คลิปย้อนหลัง';
+          workshop.total_customers = `${workshop.sum_customers}`;
+          workshop.lecturer_name = `วิทยากร - คุณ${ workshop.lecturer_name }`;
+        } else {
+          workshop.total_customers = `${workshop.sum_customers} / ${workshop.max_customers}`;
+          workshop.lecturer_name = `วิทยากร - คุณ${ workshop.lecturer_name }`;
+        }
+      });
+
       this.loadingService.hide();
     });
   }

@@ -38,10 +38,10 @@
     <div class="card-container">
       <div>
         <div class="row g-0 custom-card custom-card-navigate mb-4" *ngFor="let workshop of workshopList" (click)="redirectToForm()">
-          <div class="col-md-6">
+          <div class="col-md-5 img-center">
             <img [src]="workshop.img_url" class="img-fluid" [alt]="workshop.workshop_id" (error)="workshop.img_url = commonImageUrl">
           </div>
-          <div class="col-md-6">
+          <div class="col-md-7">
             <div class="card-body">
               <div class="d-flex justify-content-between card-header-s1 font-inter-s20">
                 <div class="card-text font-inter-orange">{{ workshop.workshop_type }}</div>
@@ -49,10 +49,10 @@
               </div>
               <h3 class="font-inter-b2 font-inter-s36">{{ workshop.workshop_name }}</h3>
               <div class="d-flex card-header-s2">
-                <div class="font-inter-s20">วิทยากร - คุณ{{ workshop.lecturer_name }}</div>
+                <div class="font-inter-s20">{{ workshop.lecturer_name }}</div>
               </div>
               <div class="d-flex justify-content-between card-header-s1 font-inter-s20">
-                <div><span class="fa-regular fa-user padding-r10"></span>{{ workshop.sum_customers }} / {{ workshop.max_customers }}</div>
+                <div><span class="fa-regular fa-user padding-r10"></span>{{ workshop.total_customers }}</div>
                 <div><span class="fa-regular fa-clock padding-r10"></span>{{ workshop.duration }}</div>
                 <div>{{ workshop.level }}</div>
               </div>
