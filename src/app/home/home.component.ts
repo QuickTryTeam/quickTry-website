@@ -11,6 +11,8 @@ import { WorkshopService } from '../service/workshop.service';
 export class HomeComponent {
   commonImageUrl: string = 'assets/img/mock.png'
   workshopList: WorkshopDetail[] = [];
+  liveWorkshopList: WorkshopDetail[] = [];
+  recordWorkshopList: WorkshopDetail[] = [];
 
   constructor(
     private loadingService: LoadingService,
@@ -33,11 +35,18 @@ export class HomeComponent {
         }
       });
 
+      this.liveWorkshopList = this.workshopList.filter(workshop => workshop.workshop_category !== 'record')
+      this.recordWorkshopList = this.workshopList.filter(workshop => workshop.workshop_category === 'record')
+
       this.loadingService.hide();
     });
   }
 
-  redirectToForm() {
-    window.open('https://forms.gle/ZThJTzwtPCV9qSbc7', '_blank');
+  redirectToForm(type: string) {
+    if (type === 'liveOnline') {
+      window.open('https://forms.gle/ZThJTzwtPCV9qSbc7', '_blank');
+    } else if (type === 'record') {
+      window.open('https://forms.gle/ceTUXaPVzyF2Hqqk9', '_blank');
+    }
   }
 }
